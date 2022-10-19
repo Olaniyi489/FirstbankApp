@@ -31,20 +31,21 @@
             this.pnldepositpage = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlsection = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt1balance = new System.Windows.Forms.Label();
+            this.txt1accounttype = new System.Windows.Forms.Label();
+            this.txt1accountnumber = new System.Windows.Forms.Label();
+            this.txtaccountownername = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtfullname = new System.Windows.Forms.Label();
+            this.txtbalance = new System.Windows.Forms.Label();
             this.txtaccounnumber = new System.Windows.Forms.Label();
             this.txtaccounttype = new System.Windows.Forms.Label();
-            this.txtbalance = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtaccountownername = new System.Windows.Forms.Label();
-            this.txt1accountnumber = new System.Windows.Forms.Label();
-            this.txt1accounttype = new System.Windows.Forms.Label();
-            this.txt1balance = new System.Windows.Forms.Label();
+            this.btn_accntdetailspage = new System.Windows.Forms.Button();
             this.pnldepositpage.SuspendLayout();
             this.pnlsection.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnldepositpage
@@ -77,6 +78,71 @@
             this.pnlsection.Name = "pnlsection";
             this.pnlsection.Size = new System.Drawing.Size(814, 192);
             this.pnlsection.TabIndex = 2;
+            this.pnlsection.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsection_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txt1balance);
+            this.panel3.Controls.Add(this.txt1accounttype);
+            this.panel3.Controls.Add(this.txt1accountnumber);
+            this.panel3.Controls.Add(this.txtaccountownername);
+            this.panel3.Location = new System.Drawing.Point(55, 89);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(717, 55);
+            this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // txt1balance
+            // 
+            this.txt1balance.AutoSize = true;
+            this.txt1balance.Location = new System.Drawing.Point(604, 25);
+            this.txt1balance.Name = "txt1balance";
+            this.txt1balance.Size = new System.Drawing.Size(10, 13);
+            this.txt1balance.TabIndex = 3;
+            this.txt1balance.Text = " ";
+            this.txt1balance.Click += new System.EventHandler(this.txt1balance_Click);
+            // 
+            // txt1accounttype
+            // 
+            this.txt1accounttype.AutoSize = true;
+            this.txt1accounttype.Location = new System.Drawing.Point(400, 25);
+            this.txt1accounttype.Name = "txt1accounttype";
+            this.txt1accounttype.Size = new System.Drawing.Size(10, 13);
+            this.txt1accounttype.TabIndex = 2;
+            this.txt1accounttype.Text = " ";
+            this.txt1accounttype.Click += new System.EventHandler(this.txt1accounttype_Click);
+            // 
+            // txt1accountnumber
+            // 
+            this.txt1accountnumber.AutoSize = true;
+            this.txt1accountnumber.Location = new System.Drawing.Point(217, 25);
+            this.txt1accountnumber.Name = "txt1accountnumber";
+            this.txt1accountnumber.Size = new System.Drawing.Size(10, 13);
+            this.txt1accountnumber.TabIndex = 1;
+            this.txt1accountnumber.Text = " ";
+            this.txt1accountnumber.Click += new System.EventHandler(this.txt1accountnumber_Click);
+            // 
+            // txtaccountownername
+            // 
+            this.txtaccountownername.AutoSize = true;
+            this.txtaccountownername.Location = new System.Drawing.Point(37, 25);
+            this.txtaccountownername.Name = "txtaccountownername";
+            this.txtaccountownername.Size = new System.Drawing.Size(10, 13);
+            this.txtaccountownername.TabIndex = 0;
+            this.txtaccountownername.Text = " ";
+            this.txtaccountownername.Click += new System.EventHandler(this.txtaccountownername_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtfullname);
+            this.panel2.Controls.Add(this.txtbalance);
+            this.panel2.Controls.Add(this.txtaccounnumber);
+            this.panel2.Controls.Add(this.txtaccounttype);
+            this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(55, 33);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(717, 53);
+            this.panel2.TabIndex = 4;
             // 
             // txtfullname
             // 
@@ -86,6 +152,15 @@
             this.txtfullname.Size = new System.Drawing.Size(67, 13);
             this.txtfullname.TabIndex = 0;
             this.txtfullname.Text = "FULL NAME";
+            // 
+            // txtbalance
+            // 
+            this.txtbalance.AutoSize = true;
+            this.txtbalance.Location = new System.Drawing.Point(604, 20);
+            this.txtbalance.Name = "txtbalance";
+            this.txtbalance.Size = new System.Drawing.Size(56, 13);
+            this.txtbalance.TabIndex = 3;
+            this.txtbalance.Text = "BALANCE";
             // 
             // txtaccounnumber
             // 
@@ -105,92 +180,36 @@
             this.txtaccounttype.TabIndex = 2;
             this.txtaccounttype.Text = "ACCOUNT TYPE";
             // 
-            // txtbalance
+            // btn_accntdetailspage
             // 
-            this.txtbalance.AutoSize = true;
-            this.txtbalance.Location = new System.Drawing.Point(604, 20);
-            this.txtbalance.Name = "txtbalance";
-            this.txtbalance.Size = new System.Drawing.Size(56, 13);
-            this.txtbalance.TabIndex = 3;
-            this.txtbalance.Text = "BALANCE";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtfullname);
-            this.panel2.Controls.Add(this.txtbalance);
-            this.panel2.Controls.Add(this.txtaccounnumber);
-            this.panel2.Controls.Add(this.txtaccounttype);
-            this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(55, 33);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(717, 53);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txt1balance);
-            this.panel3.Controls.Add(this.txt1accounttype);
-            this.panel3.Controls.Add(this.txt1accountnumber);
-            this.panel3.Controls.Add(this.txtaccountownername);
-            this.panel3.Location = new System.Drawing.Point(55, 89);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(717, 55);
-            this.panel3.TabIndex = 4;
-            // 
-            // txtaccountownername
-            // 
-            this.txtaccountownername.AutoSize = true;
-            this.txtaccountownername.Location = new System.Drawing.Point(37, 25);
-            this.txtaccountownername.Name = "txtaccountownername";
-            this.txtaccountownername.Size = new System.Drawing.Size(68, 13);
-            this.txtaccountownername.TabIndex = 0;
-            this.txtaccountownername.Text = "Salami Waris";
-            // 
-            // txt1accountnumber
-            // 
-            this.txt1accountnumber.AutoSize = true;
-            this.txt1accountnumber.Location = new System.Drawing.Point(217, 25);
-            this.txt1accountnumber.Name = "txt1accountnumber";
-            this.txt1accountnumber.Size = new System.Drawing.Size(67, 13);
-            this.txt1accountnumber.TabIndex = 1;
-            this.txt1accountnumber.Text = "5121438136";
-            // 
-            // txt1accounttype
-            // 
-            this.txt1accounttype.AutoSize = true;
-            this.txt1accounttype.Location = new System.Drawing.Point(400, 25);
-            this.txt1accounttype.Name = "txt1accounttype";
-            this.txt1accounttype.Size = new System.Drawing.Size(41, 13);
-            this.txt1accounttype.TabIndex = 2;
-            this.txt1accounttype.Text = "Current";
-            // 
-            // txt1balance
-            // 
-            this.txt1balance.AutoSize = true;
-            this.txt1balance.Location = new System.Drawing.Point(604, 25);
-            this.txt1balance.Name = "txt1balance";
-            this.txt1balance.Size = new System.Drawing.Size(46, 13);
-            this.txt1balance.TabIndex = 3;
-            this.txt1balance.Text = "4000.00";
+            this.btn_accntdetailspage.Location = new System.Drawing.Point(24, 26);
+            this.btn_accntdetailspage.Name = "btn_accntdetailspage";
+            this.btn_accntdetailspage.Size = new System.Drawing.Size(75, 23);
+            this.btn_accntdetailspage.TabIndex = 3;
+            this.btn_accntdetailspage.Text = "Back";
+            this.btn_accntdetailspage.UseVisualStyleBackColor = true;
+            this.btn_accntdetailspage.Click += new System.EventHandler(this.btn_accntdetailspage_Click);
             // 
             // AccountDetailsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 496);
+            this.Controls.Add(this.btn_accntdetailspage);
             this.Controls.Add(this.pnlsection);
             this.Controls.Add(this.pnldepositpage);
             this.Location = new System.Drawing.Point(291, 123);
             this.Name = "AccountDetailsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AccountDetailsPage";
+            this.Load += new System.EventHandler(this.AccountDetailsPage_Load);
             this.pnldepositpage.ResumeLayout(false);
             this.pnldepositpage.PerformLayout();
             this.pnlsection.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +229,6 @@
         private System.Windows.Forms.Label txtbalance;
         private System.Windows.Forms.Label txtaccounnumber;
         private System.Windows.Forms.Label txtaccounttype;
+        private System.Windows.Forms.Button btn_accntdetailspage;
     }
 }

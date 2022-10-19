@@ -12,68 +12,161 @@ namespace FirstBankApp
 {
     public partial class TransactionPage : Form
     {
+        AccountOpenPage newAccount = null;
+        txtAccountBalancePage balance = null;
+        txtdepositPage depositPage = null;
+        txtwithdrawalpage txtwithdrawalpage = null;
+        AccountDetailsPage accountDetailsPage = null;
+        AccountStatementPage accountStatementPage = null;
+        TransferPage transferPage = null;
+        LogoutPage logoutPage = null;
+
+        private UserRegistration registration = null;
+
         public TransactionPage()
         {
             InitializeComponent();
         }
-        txtdepositPage depositPage = new txtdepositPage();
-        private void button1_Click(object sender, EventArgs e)
+
+        public TransactionPage(UserRegistration registration, User user)
         {
-            
-            depositPage.MdiParent = this;
+            InitializeComponent();
+            this.registration = registration;
+            user_name_.Text = user.FullName;
+            balance = new txtAccountBalancePage(registration, user);
+            depositPage = new txtdepositPage(registration, user);
+            txtwithdrawalpage = new txtwithdrawalpage(registration, user);
+            accountDetailsPage = new AccountDetailsPage();
+            accountStatementPage = new AccountStatementPage();
+            transferPage = new TransferPage();
+            logoutPage = new LogoutPage();
+
+            newAccount = new AccountOpenPage(registration, user);
+        }
+
+       
+        private void button1_Click(object sender, EventArgs e)
+        {//Deposit
+            //if (registration.TransactionList.)
+            //{
+            //    depositPage.Visible = false;
+            //}
+            //else
+            //{
+            //    depositPage.Visible = true;
+            //    //depositPage.MdiParent = this;
+            //    depositPage.Show();
+            //    this.Close();
+            //}
+            depositPage.Visible = true;
             depositPage.Show();
+            this.Close();
         }
 
         private void TransactionPage_Load(object sender, EventArgs e)
         {
-
+           
         }
-        AccountOpenPage newAccount = new AccountOpenPage();
+        
         private void btnsetupaccount_Click(object sender, EventArgs e)
-        {
-            newAccount.MdiParent = this;
+        {//SetUpAccount
+            //newAccount.MdiParent = this;
             newAccount.Show();
+            this.Close();
         }
-        txtAccountBalancePage balance = new txtAccountBalancePage();
+       
         private void txtcheckbalance_Click(object sender, EventArgs e)
-        {
-            balance.MdiParent = this;
+        {//CheckBalance
+            //if (newAccount.GetShouldSetUpAccount())
+            //{
+            //    balance.Visible = false;
+            //}
+            //else
+            //{
+            //    balance.Visible = true;
+            //    //balance.MdiParent = this;
+            //    balance.Show();
+            //    this.Close();
+            //} 
+            balance.Visible = true;
             balance.Show();
+            this.Close();
         }
-        txtwithdrawalpage txtwithdrawalpage = new txtwithdrawalpage();
+       
         private void txtwithdrawal_Click(object sender, EventArgs e)
-        {
-          
-            txtwithdrawalpage.MdiParent = this;
+        {//Withdrawal
+            //if (newAccount.GetShouldSetUpAccount())
+            //{
+            //    txtwithdrawalpage.Visible = false;
+            //}
+            //else
+            //{
+            //    txtwithdrawalpage.Visible = true;
+            //    txtwithdrawalpage.MdiParent = this;
+            //    txtwithdrawalpage.Show();
+            //}
+            txtwithdrawalpage.Visible = true;
             txtwithdrawalpage.Show();
+            this.Close();
         }
-        AccountDetailsPage accountDetailsPage = new AccountDetailsPage();
+        
         private void txtaccntdetails_Click(object sender, EventArgs e)
-        {
-           
-            accountDetailsPage.MdiParent = this;
+        {//AccountDetails
+         //if (newAccount.GetShouldSetUpAccount())
+         //{
+         //    accountDetailsPage.Visible = false;
+         //}
+         //else
+         //{
+         //    accountDetailsPage.Visible = false;
+         //    accountDetailsPage.MdiParent = this;
+         //    accountDetailsPage.Show();
+         //}
+            accountDetailsPage.Visible = false;
             accountDetailsPage.Show();
+            this.Close();
         }
-        AccountStatementPage accountStatementPage = new AccountStatementPage();
+        
         private void txtaccntstatement_Click(object sender, EventArgs e)
-        {
-            
-            accountStatementPage.MdiParent = this;
+        {//AccountStatement
+            //if (newAccount.GetShouldSetUpAccount())
+            //{
+            //    accountStatementPage.Visible = false;
+            //}
+            //else
+            //{
+            //    accountStatementPage.Visible = false;
+            //    accountStatementPage.MdiParent = this;
+            //    accountStatementPage.Show();
+            //}
+            accountStatementPage.Visible = false;
             accountStatementPage.Show();
+            this.Close();
         }
-        TransferPage transferPage = new TransferPage();
+        
         private void txttransfer_Click(object sender, EventArgs e)
-        {
-            
-            transferPage.MdiParent = this;
+        {//Transfer
+            //if (newAccount.GetShouldSetUpAccount())
+            //{
+            //    transferPage.Visible = false;
+            //}
+            //else
+            //{
+            //    transferPage.Visible = false;
+            //    transferPage.MdiParent = this;
+            //    transferPage.Show();
+            //}
+            transferPage.Visible = false;
             transferPage.Show();
+            this.Close();
         }
-        LogoutPage logoutPage = new LogoutPage();
+       
         private void txtlogout_Click(object sender, EventArgs e)
-        {
-           
-            logoutPage.MdiParent = this;
-            logoutPage.Show();
+        {//Logout
+            //logoutPage.MdiParent = this;
+           Welcome welcome = new Welcome();
+           welcome.Show();
+           this.Close();
         }
     }
 }

@@ -31,11 +31,13 @@
             this.pnldepositpage = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnldepositpage2 = new System.Windows.Forms.Panel();
-            this.txtenteraccountnumber = new System.Windows.Forms.Label();
-            this.txtamounttodeposit = new System.Windows.Forms.Label();
-            this.txtsuccessfulmsg = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btndeposit = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtsuccessfulmsg = new System.Windows.Forms.Label();
+            this.txtamounttodeposit = new System.Windows.Forms.Label();
+            this.txtenteraccountnumber = new System.Windows.Forms.Label();
+            this.back_to_transaction = new System.Windows.Forms.Button();
             this.pnldepositpage.SuspendLayout();
             this.pnldepositpage2.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,7 @@
             // pnldepositpage2
             // 
             this.pnldepositpage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.pnldepositpage2.Controls.Add(this.btndeposit);
             this.pnldepositpage2.Controls.Add(this.textBox2);
             this.pnldepositpage2.Controls.Add(this.textBox1);
             this.pnldepositpage2.Controls.Add(this.txtsuccessfulmsg);
@@ -75,15 +78,43 @@
             this.pnldepositpage2.Name = "pnldepositpage2";
             this.pnldepositpage2.Size = new System.Drawing.Size(636, 291);
             this.pnldepositpage2.TabIndex = 1;
+            this.pnldepositpage2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnldepositpage2_Paint);
             // 
-            // txtenteraccountnumber
+            // btndeposit
             // 
-            this.txtenteraccountnumber.AutoSize = true;
-            this.txtenteraccountnumber.Location = new System.Drawing.Point(34, 41);
-            this.txtenteraccountnumber.Name = "txtenteraccountnumber";
-            this.txtenteraccountnumber.Size = new System.Drawing.Size(207, 18);
-            this.txtenteraccountnumber.TabIndex = 0;
-            this.txtenteraccountnumber.Text = "Please Enter Account Number";
+            this.btndeposit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btndeposit.Location = new System.Drawing.Point(227, 195);
+            this.btndeposit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btndeposit.Name = "btndeposit";
+            this.btndeposit.Size = new System.Drawing.Size(231, 35);
+            this.btndeposit.TabIndex = 5;
+            this.btndeposit.Text = "Deposit";
+            this.btndeposit.UseVisualStyleBackColor = true;
+            this.btndeposit.Click += new System.EventHandler(this.btndeposit_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(394, 128);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(239, 24);
+            this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(286, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(347, 24);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txtsuccessfulmsg
+            // 
+            this.txtsuccessfulmsg.AutoSize = true;
+            this.txtsuccessfulmsg.Location = new System.Drawing.Point(210, 235);
+            this.txtsuccessfulmsg.Name = "txtsuccessfulmsg";
+            this.txtsuccessfulmsg.Size = new System.Drawing.Size(0, 18);
+            this.txtsuccessfulmsg.TabIndex = 2;
             // 
             // txtamounttodeposit
             // 
@@ -94,37 +125,34 @@
             this.txtamounttodeposit.TabIndex = 1;
             this.txtamounttodeposit.Text = "Please Enter Amount To Deposit to (Owner account)";
             // 
-            // txtsuccessfulmsg
+            // txtenteraccountnumber
             // 
-            this.txtsuccessfulmsg.AutoSize = true;
-            this.txtsuccessfulmsg.Location = new System.Drawing.Point(214, 235);
-            this.txtsuccessfulmsg.Name = "txtsuccessfulmsg";
-            this.txtsuccessfulmsg.Size = new System.Drawing.Size(270, 18);
-            this.txtsuccessfulmsg.TabIndex = 2;
-            this.txtsuccessfulmsg.Text = "Hey yo! Amount Deposited Successfully";
+            this.txtenteraccountnumber.AutoSize = true;
+            this.txtenteraccountnumber.Location = new System.Drawing.Point(34, 41);
+            this.txtenteraccountnumber.Name = "txtenteraccountnumber";
+            this.txtenteraccountnumber.Size = new System.Drawing.Size(207, 18);
+            this.txtenteraccountnumber.TabIndex = 0;
+            this.txtenteraccountnumber.Text = "Please Enter Account Number";
             // 
-            // textBox1
+            // back_to_transaction
             // 
-            this.textBox1.Location = new System.Drawing.Point(286, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 24);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(394, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(239, 24);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.back_to_transaction.Location = new System.Drawing.Point(33, 12);
+            this.back_to_transaction.Name = "back_to_transaction";
+            this.back_to_transaction.Size = new System.Drawing.Size(91, 43);
+            this.back_to_transaction.TabIndex = 9;
+            this.back_to_transaction.Text = "Back";
+            this.back_to_transaction.UseVisualStyleBackColor = true;
+            this.back_to_transaction.Click += new System.EventHandler(this.back_to_transaction_Click);
             // 
             // txtdepositPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 496);
+            this.ClientSize = new System.Drawing.Size(907, 575);
+            this.Controls.Add(this.back_to_transaction);
             this.Controls.Add(this.pnldepositpage2);
             this.Controls.Add(this.pnldepositpage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(291, 123);
             this.Name = "txtdepositPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -147,5 +175,7 @@
         private System.Windows.Forms.Label txtsuccessfulmsg;
         private System.Windows.Forms.Label txtamounttodeposit;
         private System.Windows.Forms.Label txtenteraccountnumber;
+        private System.Windows.Forms.Button btndeposit;
+        private System.Windows.Forms.Button back_to_transaction;
     }
 }

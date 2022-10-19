@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccounImplementation.cs" />
     <Compile Include="AccountBalancePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AccountBalancePage.Designer.cs">
       <DependentUpon>AccountBalancePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccountDetails.cs" />
     <Compile Include="AccountDetailsPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +75,8 @@
     <Compile Include="AccountStatementPage.Designer.cs">
       <DependentUpon>AccountStatementPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Balance.cs" />
+    <Compile Include="Deposit.cs" />
     <Compile Include="DepositPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +95,7 @@
     <Compile Include="LogoutPage.Designer.cs">
       <DependentUpon>LogoutPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs" />
     <Compile Include="TransactionPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +108,8 @@
     <Compile Include="TransferPage.Designer.cs">
       <DependentUpon>TransferPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserRegistration.cs" />
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +124,7 @@
     <Compile Include="SetUpUserAccount.Designer.cs">
       <DependentUpon>SetUpUserAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Withdrawal.cs" />
     <Compile Include="WithdrawalPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +176,7 @@
     <EmbeddedResource Include="WithdrawalPage.resx">
       <DependentUpon>WithdrawalPage.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

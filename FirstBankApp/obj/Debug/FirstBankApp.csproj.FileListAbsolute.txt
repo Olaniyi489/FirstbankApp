@@ -42,3 +42,6 @@ C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\obj\Debug\Firs
 C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\obj\Debug\FirstBankApp.csproj.CoreCompileInputs.cache
 C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\obj\Debug\FirstBankApp.exe
 C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\obj\Debug\FirstBankApp.pdb
+C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Decagon\Desktop\Decagon Projects\Week4-Task\FirstBankApp\obj\Debug\FirstBankApp.csproj.CopyComplete

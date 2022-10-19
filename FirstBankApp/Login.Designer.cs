@@ -33,12 +33,13 @@
             this.txtenteryourpassword = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtlogin = new System.Windows.Forms.Button();
+            this.home = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtenteryouremail
             // 
             this.txtenteryouremail.AutoSize = true;
-            this.txtenteryouremail.Location = new System.Drawing.Point(67, 58);
+            this.txtenteryouremail.Location = new System.Drawing.Point(261, 58);
             this.txtenteryouremail.Name = "txtenteryouremail";
             this.txtenteryouremail.Size = new System.Drawing.Size(85, 13);
             this.txtenteryouremail.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(225, 51);
+            this.textBox1.Location = new System.Drawing.Point(479, 51);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(348, 20);
             this.textBox1.TabIndex = 1;
@@ -55,7 +56,7 @@
             // txtenteryourpassword
             // 
             this.txtenteryourpassword.AutoSize = true;
-            this.txtenteryourpassword.Location = new System.Drawing.Point(67, 149);
+            this.txtenteryourpassword.Location = new System.Drawing.Point(261, 152);
             this.txtenteryourpassword.Name = "txtenteryourpassword";
             this.txtenteryourpassword.Size = new System.Drawing.Size(109, 13);
             this.txtenteryourpassword.TabIndex = 2;
@@ -63,7 +64,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 142);
+            this.textBox2.Location = new System.Drawing.Point(479, 149);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(348, 20);
             this.textBox2.TabIndex = 3;
@@ -71,7 +72,7 @@
             // 
             // txtlogin
             // 
-            this.txtlogin.Location = new System.Drawing.Point(298, 246);
+            this.txtlogin.Location = new System.Drawing.Point(563, 244);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.Size = new System.Drawing.Size(194, 23);
             this.txtlogin.TabIndex = 4;
@@ -79,11 +80,22 @@
             this.txtlogin.UseVisualStyleBackColor = true;
             this.txtlogin.Click += new System.EventHandler(this.txtlogin_Click);
             // 
+            // home
+            // 
+            this.home.Location = new System.Drawing.Point(65, 28);
+            this.home.Name = "home";
+            this.home.Size = new System.Drawing.Size(110, 23);
+            this.home.TabIndex = 5;
+            this.home.Text = "Back";
+            this.home.UseVisualStyleBackColor = true;
+            this.home.Click += new System.EventHandler(this.home_Click);
+            // 
             // txtLoginpage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 575);
+            this.Controls.Add(this.home);
             this.Controls.Add(this.txtlogin);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtenteryourpassword);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.Label txtenteryourpassword;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button txtlogin;
+        private System.Windows.Forms.Button home;
     }
 }

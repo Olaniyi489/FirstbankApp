@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtslcttrnx = new System.Windows.Forms.Label();
             this.txtwlcmfirstbankapp = new System.Windows.Forms.Label();
             this.btnsetupaccount = new System.Windows.Forms.Button();
             this.txtcheckbalance = new System.Windows.Forms.Button();
@@ -38,17 +37,8 @@
             this.txtaccntstatement = new System.Windows.Forms.Button();
             this.txttransfer = new System.Windows.Forms.Button();
             this.txtlogout = new System.Windows.Forms.Button();
+            this.user_name_ = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // txtslcttrnx
-            // 
-            this.txtslcttrnx.AutoSize = true;
-            this.txtslcttrnx.Location = new System.Drawing.Point(18, 14);
-            this.txtslcttrnx.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtslcttrnx.Name = "txtslcttrnx";
-            this.txtslcttrnx.Size = new System.Drawing.Size(171, 20);
-            this.txtslcttrnx.TabIndex = 0;
-            this.txtslcttrnx.Text = "Select Your Transation";
             // 
             // txtwlcmfirstbankapp
             // 
@@ -149,12 +139,24 @@
             this.txtlogout.UseVisualStyleBackColor = true;
             this.txtlogout.Click += new System.EventHandler(this.txtlogout_Click);
             // 
+            // user_name_
+            // 
+            this.user_name_.AutoSize = true;
+            this.user_name_.BackColor = System.Drawing.Color.Transparent;
+            this.user_name_.Location = new System.Drawing.Point(551, 43);
+            this.user_name_.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.user_name_.Name = "user_name_";
+            this.user_name_.Size = new System.Drawing.Size(20, 20);
+            this.user_name_.TabIndex = 13;
+            this.user_name_.Text = "w";
+            // 
             // TransactionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.user_name_);
             this.Controls.Add(this.txtlogout);
             this.Controls.Add(this.txttransfer);
             this.Controls.Add(this.txtaccntstatement);
@@ -164,7 +166,6 @@
             this.Controls.Add(this.txtcheckbalance);
             this.Controls.Add(this.btnsetupaccount);
             this.Controls.Add(this.txtwlcmfirstbankapp);
-            this.Controls.Add(this.txtslcttrnx);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Navy;
             this.IsMdiContainer = true;
@@ -178,8 +179,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label txtslcttrnx;
         private System.Windows.Forms.Label txtwlcmfirstbankapp;
         private System.Windows.Forms.Button btnsetupaccount;
         private System.Windows.Forms.Button txtcheckbalance;
@@ -189,5 +188,6 @@
         private System.Windows.Forms.Button txtaccntstatement;
         private System.Windows.Forms.Button txttransfer;
         private System.Windows.Forms.Button txtlogout;
+        private System.Windows.Forms.Label user_name_;
     }
 }
