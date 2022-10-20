@@ -42,6 +42,7 @@
             this.txtaccounnumber = new System.Windows.Forms.Label();
             this.txtaccounttype = new System.Windows.Forms.Label();
             this.btn_accntdetailspage = new System.Windows.Forms.Button();
+            this.btn_clicktoviewdetails = new System.Windows.Forms.Button();
             this.pnldepositpage.SuspendLayout();
             this.pnlsection.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,12 +72,13 @@
             // pnlsection
             // 
             this.pnlsection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.pnlsection.Controls.Add(this.btn_clicktoviewdetails);
             this.pnlsection.Controls.Add(this.panel3);
             this.pnlsection.Controls.Add(this.panel2);
             this.pnlsection.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pnlsection.Location = new System.Drawing.Point(12, 128);
             this.pnlsection.Name = "pnlsection";
-            this.pnlsection.Size = new System.Drawing.Size(814, 192);
+            this.pnlsection.Size = new System.Drawing.Size(814, 252);
             this.pnlsection.TabIndex = 2;
             this.pnlsection.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsection_Paint);
             // 
@@ -190,6 +192,17 @@
             this.btn_accntdetailspage.UseVisualStyleBackColor = true;
             this.btn_accntdetailspage.Click += new System.EventHandler(this.btn_accntdetailspage_Click);
             // 
+            // btn_clicktoviewdetails
+            // 
+            this.btn_clicktoviewdetails.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_clicktoviewdetails.Location = new System.Drawing.Point(360, 177);
+            this.btn_clicktoviewdetails.Name = "btn_clicktoviewdetails";
+            this.btn_clicktoviewdetails.Size = new System.Drawing.Size(75, 23);
+            this.btn_clicktoviewdetails.TabIndex = 5;
+            this.btn_clicktoviewdetails.Text = "Click Here";
+            this.btn_clicktoviewdetails.UseVisualStyleBackColor = true;
+            this.btn_clicktoviewdetails.Click += new System.EventHandler(this.btn_clicktoviewdetails_Click);
+            // 
             // AccountDetailsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,5 +243,6 @@
         private System.Windows.Forms.Label txtaccounnumber;
         private System.Windows.Forms.Label txtaccounttype;
         private System.Windows.Forms.Button btn_accntdetailspage;
+        private System.Windows.Forms.Button btn_clicktoviewdetails;
     }
 }

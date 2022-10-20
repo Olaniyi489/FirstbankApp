@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 namespace FirstBankApp
 {
@@ -22,6 +23,17 @@ namespace FirstBankApp
             InitializeComponent();
         }
 
+        private static bool PerformRegEx(string pattern, string value)
+        {
+            Regex re = new Regex(pattern);
+
+
+            if (re.IsMatch(value))
+                return (true);
+            else
+                return (false);
+        }
+
         private void txtfullname_Click(object sender, EventArgs e)
         {
 
@@ -32,11 +44,22 @@ namespace FirstBankApp
             TextBox objTextBox = (TextBox)sender;
             fullName = objTextBox.Text;
         }
+        public bool CheckName(string fullname)
+        {
+            string strRegex = @"^[A-Z]";
+
+            return PerformRegEx(strRegex, fullname);
+        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             TextBox objTextBox = (TextBox)sender;
             email = objTextBox.Text;
+        }
+        public bool CheckEmail(string email)
+        {
+            string strRegex = @"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$";
+            return PerformRegEx(strRegex, email);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -44,12 +67,17 @@ namespace FirstBankApp
             TextBox objTextBox = (TextBox)sender;
             password = objTextBox.Text;
         }
+        public bool CheckPassword(string password)
+        {
+            string strRegex = @"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$";
+            return PerformRegEx(strRegex, password);
+        }
 
         private void btnsetupaccount_Click(object sender, EventArgs e)
         {
-            if (fullName == "" || email == "" || password == "")
+            if (CheckName(fullName) != true || CheckEmail(email) != true || CheckPassword(password) != true)
             {
-                MessageBox.Show("Kindly enter your fullname, email and password");
+                MessageBox.Show("Kindly enter your details in this format Name \"Waris Salami\": Email \"Wareez@gmail.com\" : password \"Elephant20**\"");
             }
             else
             {

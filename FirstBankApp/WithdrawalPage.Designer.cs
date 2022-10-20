@@ -78,6 +78,7 @@
             this.pnldepositpage2.Name = "pnldepositpage2";
             this.pnldepositpage2.Size = new System.Drawing.Size(636, 291);
             this.pnldepositpage2.TabIndex = 2;
+            this.pnldepositpage2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnldepositpage2_Paint);
             // 
             // submit_btn
             // 

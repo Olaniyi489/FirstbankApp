@@ -12,10 +12,10 @@ namespace FirstBankApp
         public List<User> users { get; set; }
         public List<Transaction> TransactionList { get; set; }
 
-        public UserRegistration()
-        {
+        //public UserRegistration()
+        //{
             
-        }
+        //}
 
         public User GetUser(string email, string password)
         {

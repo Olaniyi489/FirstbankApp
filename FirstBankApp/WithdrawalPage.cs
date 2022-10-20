@@ -124,5 +124,10 @@ namespace FirstBankApp
             TextBox objTextBox = (TextBox)sender;
             withDrawAmount = objTextBox.Text;
         }
+
+        private void pnldepositpage2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
