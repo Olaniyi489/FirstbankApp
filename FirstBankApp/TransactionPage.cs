@@ -37,7 +37,7 @@ namespace FirstBankApp
             depositPage = new txtdepositPage(registration, user);
             txtwithdrawalpage = new txtwithdrawalpage(registration, user);
             accountDetailsPage = new AccountDetailsPage();
-            accountStatementPage = new AccountStatementPage();
+            accountStatementPage = new AccountStatementPage(registration, user);
             transferPage = new TransferPage();
             logoutPage = new LogoutPage();
 

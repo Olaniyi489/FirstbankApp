@@ -31,28 +31,28 @@
             this.pnldepositpage = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlsection = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt1balance = new System.Windows.Forms.Label();
-            this.txt1accounttype = new System.Windows.Forms.Label();
-            this.txt1transactiontypedescription = new System.Windows.Forms.Label();
-            this.txt1date = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtdate = new System.Windows.Forms.Label();
-            this.txtbalance = new System.Windows.Forms.Label();
-            this.txtdescription = new System.Windows.Forms.Label();
-            this.txtamount = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbl_amount2 = new System.Windows.Forms.Label();
+            this.lbl_balance2 = new System.Windows.Forms.Label();
+            this.lbl_withdrawal2 = new System.Windows.Forms.Label();
+            this.lbl2_deposit = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbl_balance1 = new System.Windows.Forms.Label();
+            this.lbl_deposit2 = new System.Windows.Forms.Label();
+            this.lbl_deposit1 = new System.Windows.Forms.Label();
+            this.lbl_amount1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtbalance = new System.Windows.Forms.Label();
+            this.lbl_deposit = new System.Windows.Forms.Label();
+            this.txtamount = new System.Windows.Forms.Label();
+            this.btn_back_to_trancation_page = new System.Windows.Forms.Button();
+            this.btn_getstatement = new System.Windows.Forms.Button();
             this.pnldepositpage.SuspendLayout();
             this.pnlsection.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnldepositpage
@@ -87,73 +87,113 @@
             this.pnlsection.Size = new System.Drawing.Size(814, 249);
             this.pnlsection.TabIndex = 3;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lbl_amount2);
+            this.panel1.Controls.Add(this.lbl_balance2);
+            this.panel1.Controls.Add(this.lbl_withdrawal2);
+            this.panel1.Controls.Add(this.lbl2_deposit);
+            this.panel1.Location = new System.Drawing.Point(55, 150);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(717, 55);
+            this.panel1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(245, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.TabIndex = 5;
+            // 
+            // lbl_amount2
+            // 
+            this.lbl_amount2.AutoSize = true;
+            this.lbl_amount2.Location = new System.Drawing.Point(37, 25);
+            this.lbl_amount2.Name = "lbl_amount2";
+            this.lbl_amount2.Size = new System.Drawing.Size(43, 13);
+            this.lbl_amount2.TabIndex = 4;
+            this.lbl_amount2.Text = "Amount";
+            // 
+            // lbl_balance2
+            // 
+            this.lbl_balance2.AutoSize = true;
+            this.lbl_balance2.Location = new System.Drawing.Point(634, 25);
+            this.lbl_balance2.Name = "lbl_balance2";
+            this.lbl_balance2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_balance2.TabIndex = 3;
+            // 
+            // lbl_withdrawal2
+            // 
+            this.lbl_withdrawal2.AutoSize = true;
+            this.lbl_withdrawal2.Location = new System.Drawing.Point(431, 25);
+            this.lbl_withdrawal2.Name = "lbl_withdrawal2";
+            this.lbl_withdrawal2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_withdrawal2.TabIndex = 2;
+            // 
+            // lbl2_deposit
+            // 
+            this.lbl2_deposit.AutoSize = true;
+            this.lbl2_deposit.Location = new System.Drawing.Point(232, 25);
+            this.lbl2_deposit.Name = "lbl2_deposit";
+            this.lbl2_deposit.Size = new System.Drawing.Size(0, 13);
+            this.lbl2_deposit.TabIndex = 1;
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txt1balance);
-            this.panel3.Controls.Add(this.txt1accounttype);
-            this.panel3.Controls.Add(this.txt1transactiontypedescription);
-            this.panel3.Controls.Add(this.txt1date);
+            this.panel3.Controls.Add(this.lbl_balance1);
+            this.panel3.Controls.Add(this.lbl_deposit2);
+            this.panel3.Controls.Add(this.lbl_deposit1);
+            this.panel3.Controls.Add(this.lbl_amount1);
             this.panel3.Location = new System.Drawing.Point(55, 89);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(717, 55);
             this.panel3.TabIndex = 4;
             // 
-            // txt1balance
+            // lbl_balance1
             // 
-            this.txt1balance.AutoSize = true;
-            this.txt1balance.Location = new System.Drawing.Point(634, 25);
-            this.txt1balance.Name = "txt1balance";
-            this.txt1balance.Size = new System.Drawing.Size(46, 13);
-            this.txt1balance.TabIndex = 3;
-            this.txt1balance.Text = "4000.00";
+            this.lbl_balance1.AutoSize = true;
+            this.lbl_balance1.Location = new System.Drawing.Point(634, 25);
+            this.lbl_balance1.Name = "lbl_balance1";
+            this.lbl_balance1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_balance1.TabIndex = 3;
             // 
-            // txt1accounttype
+            // lbl_deposit2
             // 
-            this.txt1accounttype.AutoSize = true;
-            this.txt1accounttype.Location = new System.Drawing.Point(496, 25);
-            this.txt1accounttype.Name = "txt1accounttype";
-            this.txt1accounttype.Size = new System.Drawing.Size(41, 13);
-            this.txt1accounttype.TabIndex = 2;
-            this.txt1accounttype.Text = "Current";
+            this.lbl_deposit2.AutoSize = true;
+            this.lbl_deposit2.Location = new System.Drawing.Point(431, 25);
+            this.lbl_deposit2.Name = "lbl_deposit2";
+            this.lbl_deposit2.Size = new System.Drawing.Size(0, 13);
+            this.lbl_deposit2.TabIndex = 2;
             // 
-            // txt1transactiontypedescription
+            // lbl_deposit1
             // 
-            this.txt1transactiontypedescription.AutoSize = true;
-            this.txt1transactiontypedescription.Location = new System.Drawing.Point(245, 25);
-            this.txt1transactiontypedescription.Name = "txt1transactiontypedescription";
-            this.txt1transactiontypedescription.Size = new System.Drawing.Size(88, 13);
-            this.txt1transactiontypedescription.TabIndex = 1;
-            this.txt1transactiontypedescription.Text = "Money deposited";
+            this.lbl_deposit1.AutoSize = true;
+            this.lbl_deposit1.Location = new System.Drawing.Point(245, 25);
+            this.lbl_deposit1.Name = "lbl_deposit1";
+            this.lbl_deposit1.Size = new System.Drawing.Size(0, 13);
+            this.lbl_deposit1.TabIndex = 1;
             // 
-            // txt1date
+            // lbl_amount1
             // 
-            this.txt1date.AutoSize = true;
-            this.txt1date.Location = new System.Drawing.Point(37, 25);
-            this.txt1date.Name = "txt1date";
-            this.txt1date.Size = new System.Drawing.Size(116, 13);
-            this.txt1date.TabIndex = 0;
-            this.txt1date.Text = "17/10/2022   01:34:24";
+            this.lbl_amount1.AutoSize = true;
+            this.lbl_amount1.Location = new System.Drawing.Point(37, 25);
+            this.lbl_amount1.Name = "lbl_amount1";
+            this.lbl_amount1.Size = new System.Drawing.Size(43, 13);
+            this.lbl_amount1.TabIndex = 0;
+            this.lbl_amount1.Text = "Amount";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.txtdate);
             this.panel2.Controls.Add(this.txtbalance);
-            this.panel2.Controls.Add(this.txtdescription);
+            this.panel2.Controls.Add(this.lbl_deposit);
             this.panel2.Controls.Add(this.txtamount);
             this.panel2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Location = new System.Drawing.Point(55, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(717, 53);
             this.panel2.TabIndex = 4;
-            // 
-            // txtdate
-            // 
-            this.txtdate.AutoSize = true;
-            this.txtdate.Location = new System.Drawing.Point(37, 20);
-            this.txtdate.Name = "txtdate";
-            this.txtdate.Size = new System.Drawing.Size(36, 13);
-            this.txtdate.TabIndex = 0;
-            this.txtdate.Text = "DATE";
             // 
             // txtbalance
             // 
@@ -164,111 +204,67 @@
             this.txtbalance.TabIndex = 3;
             this.txtbalance.Text = "BALANCE";
             // 
-            // txtdescription
+            // lbl_deposit
             // 
-            this.txtdescription.AutoSize = true;
-            this.txtdescription.Location = new System.Drawing.Point(245, 20);
-            this.txtdescription.Name = "txtdescription";
-            this.txtdescription.Size = new System.Drawing.Size(80, 13);
-            this.txtdescription.TabIndex = 1;
-            this.txtdescription.Text = "DESCRIPTION";
+            this.lbl_deposit.AutoSize = true;
+            this.lbl_deposit.Location = new System.Drawing.Point(245, 20);
+            this.lbl_deposit.Name = "lbl_deposit";
+            this.lbl_deposit.Size = new System.Drawing.Size(54, 13);
+            this.lbl_deposit.TabIndex = 1;
+            this.lbl_deposit.Text = "DEPOSIT";
             // 
             // txtamount
             // 
             this.txtamount.AutoSize = true;
-            this.txtamount.Location = new System.Drawing.Point(496, 20);
+            this.txtamount.Location = new System.Drawing.Point(431, 20);
             this.txtamount.Name = "txtamount";
-            this.txtamount.Size = new System.Drawing.Size(54, 13);
+            this.txtamount.Size = new System.Drawing.Size(83, 13);
             this.txtamount.TabIndex = 2;
-            this.txtamount.Text = "AMOUNT";
+            this.txtamount.Text = "WITHDRAWAL";
             // 
-            // panel1
+            // btn_back_to_trancation_page
             // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(55, 150);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(717, 55);
-            this.panel1.TabIndex = 5;
+            this.btn_back_to_trancation_page.Location = new System.Drawing.Point(33, 22);
+            this.btn_back_to_trancation_page.Name = "btn_back_to_trancation_page";
+            this.btn_back_to_trancation_page.Size = new System.Drawing.Size(84, 35);
+            this.btn_back_to_trancation_page.TabIndex = 4;
+            this.btn_back_to_trancation_page.Text = "Back";
+            this.btn_back_to_trancation_page.UseVisualStyleBackColor = true;
+            this.btn_back_to_trancation_page.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // btn_getstatement
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(634, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "1000.00";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(496, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Current";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(245, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "5121438136";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Salami Waris";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 13);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "17/10/2022   01:37:50";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(245, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Money withdraw";
+            this.btn_getstatement.Location = new System.Drawing.Point(336, 429);
+            this.btn_getstatement.Name = "btn_getstatement";
+            this.btn_getstatement.Size = new System.Drawing.Size(149, 35);
+            this.btn_getstatement.TabIndex = 5;
+            this.btn_getstatement.Text = "Click To Get Statement";
+            this.btn_getstatement.UseVisualStyleBackColor = true;
+            this.btn_getstatement.Click += new System.EventHandler(this.btn_getstatement_Click);
             // 
             // AccountStatementPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 496);
+            this.Controls.Add(this.btn_getstatement);
+            this.Controls.Add(this.btn_back_to_trancation_page);
             this.Controls.Add(this.pnlsection);
             this.Controls.Add(this.pnldepositpage);
             this.Location = new System.Drawing.Point(291, 123);
             this.Name = "AccountStatementPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "AccountStatementPage";
+            this.Load += new System.EventHandler(this.AccountStatementPage_Load);
             this.pnldepositpage.ResumeLayout(false);
             this.pnldepositpage.PerformLayout();
             this.pnlsection.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,20 +276,20 @@
         private System.Windows.Forms.Panel pnlsection;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_amount2;
+        private System.Windows.Forms.Label lbl_balance2;
+        private System.Windows.Forms.Label lbl_withdrawal2;
+        private System.Windows.Forms.Label lbl2_deposit;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label txt1balance;
-        private System.Windows.Forms.Label txt1accounttype;
-        private System.Windows.Forms.Label txt1transactiontypedescription;
-        private System.Windows.Forms.Label txt1date;
+        private System.Windows.Forms.Label lbl_balance1;
+        private System.Windows.Forms.Label lbl_deposit2;
+        private System.Windows.Forms.Label lbl_deposit1;
+        private System.Windows.Forms.Label lbl_amount1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label txtdate;
         private System.Windows.Forms.Label txtbalance;
-        private System.Windows.Forms.Label txtdescription;
+        private System.Windows.Forms.Label lbl_deposit;
         private System.Windows.Forms.Label txtamount;
+        private System.Windows.Forms.Button btn_back_to_trancation_page;
+        private System.Windows.Forms.Button btn_getstatement;
     }
 }

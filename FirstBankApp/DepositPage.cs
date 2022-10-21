@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace FirstBankApp
 {
     public partial class txtdepositPage : Form
-    {
+    {  
         private UserRegistration registration = null;
         private User user = null;
         private string accountNumber = "";
@@ -48,7 +48,7 @@ namespace FirstBankApp
             }
             else
             {
-                List<Transaction> list = registration.TransactionList;
+                List<Transaction> list = registration.TransactionList; // List<string> 
                 Transaction userTransaction = null;
                 foreach (Transaction transaction in list)
                 {
@@ -114,6 +114,11 @@ namespace FirstBankApp
         }
 
         private void pnldepositpage2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtdepositPage_Load(object sender, EventArgs e)
         {
 
         }

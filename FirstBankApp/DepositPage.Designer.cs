@@ -157,6 +157,7 @@
             this.Name = "txtdepositPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "DepositPage";
+            this.Load += new System.EventHandler(this.txtdepositPage_Load);
             this.pnldepositpage.ResumeLayout(false);
             this.pnldepositpage.PerformLayout();
             this.pnldepositpage2.ResumeLayout(false);

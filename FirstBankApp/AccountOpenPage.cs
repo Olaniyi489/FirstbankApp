@@ -84,6 +84,7 @@ namespace FirstBankApp
                     if (shouldSetUpAccountOnce)
                     {
                         int accNo = GenerateAccountNumber();
+                        user.AccountNumber = accNo.ToString();
                         congrats.Text = "Congratulations!  Account Number Generated Succesfully";
                         account_no.Text = accNo.ToString();
                         setTransaction(accNo.ToString(), amount, registration);
